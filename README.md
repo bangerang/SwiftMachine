@@ -1,2 +1,2 @@
 # SwiftMachine
-SwiftMachine is a Finite-state machine written in Swift
+SwiftMachine is a Finite-like state machine written in Swift
