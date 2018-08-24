@@ -1,6 +1,0 @@
-framework module SwiftMachine {
-  umbrella header "SwiftMachine-umbrella.h"
-
-  export *
-  module * { export * }
-}
