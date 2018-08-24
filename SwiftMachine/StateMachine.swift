@@ -15,7 +15,7 @@ public protocol StateListener: class {
     func stateChanged<T: StateMachineDataSource>(for subject: Subject<T>)
 }
 
-public class Subject<State: StateMachineDataSource> {
+open class Subject<State: StateMachineDataSource> {
     
     private var listeners: NSPointerArray = NSPointerArray.weakObjects()
     
@@ -31,7 +31,7 @@ public class Subject<State: StateMachineDataSource> {
         }
     }
     
-    var state: State {
+    public var state: State {
         get {
             return _state
         }
@@ -42,7 +42,9 @@ public class Subject<State: StateMachineDataSource> {
         }
     }
     
-    func addListener<T: StateListener>(_ stateListener: T) {
+    public init() {}
+    
+    public func addListener<T: StateListener>(_ stateListener: T) {
         listeners.compact()
         listeners.addObject(stateListener)
         stateListener.stateChanged(for: self)
