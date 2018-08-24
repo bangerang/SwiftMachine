@@ -10,6 +10,8 @@
 		AB772EBD212EFC40006AA027 /* SwiftMachine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB772EB3212EFC40006AA027 /* SwiftMachine.framework */; };
 		AB772EC2212EFC40006AA027 /* SwiftMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB772EC1212EFC40006AA027 /* SwiftMachineTests.swift */; };
 		AB772EC4212EFC40006AA027 /* SwiftMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = AB772EB6212EFC40006AA027 /* SwiftMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB772ECE212EFCD2006AA027 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB772ECD212EFCD2006AA027 /* StateMachine.swift */; };
+		AB772ED0212EFCE6006AA027 /* NSPointerArray+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB772ECF212EFCE6006AA027 /* NSPointerArray+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		AB772EBC212EFC40006AA027 /* SwiftMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB772EC1212EFC40006AA027 /* SwiftMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMachineTests.swift; sourceTree = "<group>"; };
 		AB772EC3212EFC40006AA027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB772ECD212EFCD2006AA027 /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
+		AB772ECF212EFCE6006AA027 /* NSPointerArray+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPointerArray+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		AB772EB5212EFC40006AA027 /* SwiftMachine */ = {
 			isa = PBXGroup;
 			children = (
+				AB772ECF212EFCE6006AA027 /* NSPointerArray+Extension.swift */,
+				AB772ECD212EFCD2006AA027 /* StateMachine.swift */,
 				AB772EB6212EFC40006AA027 /* SwiftMachine.h */,
 				AB772EB7212EFC40006AA027 /* Info.plist */,
 			);
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					AB772EB2212EFC40006AA027 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					AB772EBB212EFC40006AA027 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -194,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB772ED0212EFCE6006AA027 /* NSPointerArray+Extension.swift in Sources */,
+				AB772ECE212EFCD2006AA027 /* StateMachine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +348,7 @@
 		AB772EC8212EFC40006AA027 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Johan-Thorell.SwiftMachine";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +375,7 @@
 		AB772EC9212EFC40006AA027 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +401,7 @@
 		AB772ECB212EFC40006AA027 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S3NWVLDYG9;
 				INFOPLIST_FILE = SwiftMachineTests/Info.plist;
@@ -407,6 +420,7 @@
 		AB772ECC212EFC40006AA027 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S3NWVLDYG9;
 				INFOPLIST_FILE = SwiftMachineTests/Info.plist;

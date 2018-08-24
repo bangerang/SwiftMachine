@@ -1,0 +1,16 @@
+PODS:
+  - SwiftMachine (1.0.0)
+
+DEPENDENCIES:
+  - SwiftMachine (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftMachine:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftMachine: 57b9bce3e75f410411115a491fce65791def1095
+
+PODFILE CHECKSUM: 982742db0206a6fd55094c6820d196fe46e78781
+
+COCOAPODS: 1.5.3

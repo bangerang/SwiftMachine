@@ -11,26 +11,76 @@ import XCTest
 
 class SwiftMachineTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    // MARK: - Mocks
+    var stateListenerMock: StateListenerMock!
+    var subject: StateSubjectMock!
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    class StateListenerMock: StateListener {
+
+        var asyncExpectation: XCTestExpectation?
+        
+        func stateChanged<T>(for subject: Subject<T>) where T : StateMachineDataSource {
+            if let expectation = asyncExpectation {
+                expectation.fulfill()
+            }
         }
     }
     
+    enum StateMock: StateMachineDataSource {
+        
+        case first
+        case second
+        case third
+        
+        static var initialState: SwiftMachineTests.StateMock = .first
+        
+        static func shouldTransitionFrom(from: SwiftMachineTests.StateMock, to: SwiftMachineTests.StateMock) -> Bool {
+            switch (from, to) {
+            case (.first, .second):
+                return true
+            case (.second, .third):
+                return true
+            case (.third, .first):
+                return true
+            default:
+                print("transition between from \(from) to \(to) is not allowed")
+                return false
+            }
+        }
+    }
+    
+    class StateSubjectMock: Subject<StateMock> {}
+    
+    // MARK: - Tests
+    override func setUp() {
+        super.setUp()
+        stateListenerMock = StateListenerMock()
+        subject = StateSubjectMock()
+        subject.addListener(stateListenerMock)
+    }
+
+    func testShouldBeAbleToGoFromFirstToSecond() {
+        XCTAssert(subject.state == .first)
+        subject.state = .second
+        XCTAssert(subject.state == .second)
+    }
+    
+    func testShouldNotBeAllowedToFoFromFirstToThird() {
+        XCTAssert(subject.state == .first)
+        subject.state = .third
+        XCTAssert(subject.state == .first)
+    }
+    
+    func testListenerShouldBeNotified() {
+        XCTAssert(subject.state == .first)
+        let aExpectation = expectation(description: "Listener gets notified")
+        stateListenerMock.asyncExpectation = aExpectation
+        subject.state = .second
+        waitForExpectations(timeout: 0.2) { error in
+            if let error = error {
+                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
+            }
+            
+        }
+    }
 }
