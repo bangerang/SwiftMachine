@@ -9,101 +9,89 @@
 import UIKit
 import SwiftMachine
 
-enum PizzaState: String, StateMachineDataSource {
-    case capricciosa
-    case azteka
-    case hawaii
+
+enum WeatherSeasonState: Int, StateMachineDataSource {
     
-    static var initialState: PizzaState = .capricciosa
+    case winter = 0
+    case spring
+    case summer
+    case fall
     
-    static func shouldTransitionFrom(from: PizzaState, to: PizzaState) -> Bool {
+    static var initialState: WeatherSeasonState = .winter
+    
+    static func shouldTransitionFrom(from: WeatherSeasonState, to: WeatherSeasonState) -> Bool {
         switch (from, to) {
-        case (.capricciosa, .azteka),
-             (.capricciosa, hawaii):
+        case (.winter, spring):
             return true
-        case (.azteka, .hawaii),
-             (.azteka, .capricciosa):
+        case (.spring, .summer):
             return true
-        case (.hawaii, .azteka):
+        case (.summer, .fall):
+            return true
+        case (.fall, .winter):
             return true
         default:
             return false
         }
     }
-    var tag: Int {
-        switch self {
-        case .capricciosa:
-            return 0
-        case .azteka:
-            return 1
-        case .hawaii:
-            return 2
-        }
-    }
+
+    
     
 }
-
-class PizzaSubject: Subject<PizzaState> {}
+class WeatherSeason: Subject<WeatherSeasonState> {}
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var capricciosaLabel: UILabel!
-    @IBOutlet weak var aztekaLabel: UILabel!
-    @IBOutlet weak var hawaiiLabel: UILabel!
     
-    lazy var labels: [UILabel] = {
-        return [capricciosaLabel, aztekaLabel, hawaiiLabel]
+    @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var secondButton: UIButton!
+    @IBOutlet weak var thirdButton: UIButton!
+    @IBOutlet weak var fourthButton: UIButton!
+    
+    lazy var buttons: [UIButton] = {
+        return [firstButton, secondButton, thirdButton, fourthButton]
     }()
     
-    var pizzaSubject = PizzaSubject()
-    var stateArray: [PizzaState] = [.capricciosa, .azteka, .hawaii, .azteka, .hawaii, .azteka]
-    var currentIndex: Int = 0
-    var timer: Timer?
+    let weatherSeason = WeatherSeason()
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        
+        let state = weatherSeason.state
+        let newState = WeatherSeasonState(rawValue: sender.tag)!
+        weatherSeason.state = newState
+        
+        if weatherSeason.state == state {
+            let alert = UIAlertController(title: "Not allowed", message: "Transition between \(weatherSeason.state) and \(newState) is not allowed", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(action)
+            show(alert, sender: nil)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        capricciosaLabel.tag = PizzaState.capricciosa.tag
-        capricciosaLabel.text = PizzaState.capricciosa.rawValue
-        
-        aztekaLabel.tag = PizzaState.azteka.tag
-        aztekaLabel.text = PizzaState.azteka.rawValue
-        
-        hawaiiLabel.tag = PizzaState.hawaii.tag
-        hawaiiLabel.text = PizzaState.hawaii.rawValue
-        
-        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: (#selector(nextLabel)), userInfo: nil, repeats: true)
-        timer?.fire()
+        weatherSeason.addListener(self)
     }
     
-    
-    @objc func nextLabel() {
-        if currentIndex < stateArray.count {
-            showView(with: stateArray[currentIndex])
-            currentIndex = currentIndex + 1
-        }else {
-            currentIndex = 0
+    func updateUI() {
+        for button in buttons {
+            if button.tag == weatherSeason.state.rawValue {
+                button.setTitleColor(.black, for: .normal)
+                button.backgroundColor = .green
+            }else {
+                button.setTitleColor(.white, for: .normal)
+                button.backgroundColor = .gray
+            }
         }
     }
-    func hideAllViews() {
-        labels.forEach{ $0.isHidden = true }
-    }
-    func showView(with state: PizzaState) {
-        hideAllViews()
-        let view = labels.first(where: { $0.tag == state.tag })
-        view?.isHidden = false
-        view?.alpha = 0
-        UIView.animate(withDuration: 0.4) {
-            view?.alpha = 1
-        }
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
-
+// MARK: - StateListener
+extension ViewController: StateListener {
+    func stateChanged<T>(for subject: Subject<T>) where T : StateMachineDataSource {
+        switch subject {
+            case _ as WeatherSeason:
+            updateUI()
+        default:
+            assert(false)
+        }
+    }
+}
