@@ -14,7 +14,7 @@ enum PizzaState: StateMachineDataSource {
     case baking
     case eating
     
-    static var initialState: PizzaState = .makeDough
+    static var initialState: PizzaState = .makingDough
     
     static func shouldTransition(from: PizzaState, to: PizzaState) -> Bool {
         switch (from, to) {
