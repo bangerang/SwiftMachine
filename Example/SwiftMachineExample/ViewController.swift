@@ -19,7 +19,7 @@ enum WeatherSeasonState: Int, StateMachineDataSource {
     
     static var initialState: WeatherSeasonState = .winter
     
-    static func shouldTransitionFrom(from: WeatherSeasonState, to: WeatherSeasonState) -> Bool {
+    static func shouldTransition(from: WeatherSeasonState, to: WeatherSeasonState) -> Bool {
         switch (from, to) {
         case (.winter, spring):
             return true

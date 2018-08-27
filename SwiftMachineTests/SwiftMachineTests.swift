@@ -34,7 +34,7 @@ class SwiftMachineTests: XCTestCase {
         
         static var initialState: SwiftMachineTests.StateMock = .first
         
-        static func shouldTransitionFrom(from: SwiftMachineTests.StateMock, to: SwiftMachineTests.StateMock) -> Bool {
+        static func shouldTransition(from: SwiftMachineTests.StateMock, to: SwiftMachineTests.StateMock) -> Bool {
             switch (from, to) {
             case (.first, .second):
                 return true

@@ -9,7 +9,7 @@ import Foundation
 
 public protocol StateMachineDataSource {
     static var initialState: Self { get }
-    static func shouldTransitionFrom(from: Self, to: Self) -> Bool
+    static func shouldTransition(from: Self, to: Self) -> Bool
 }
 public protocol StateListener: class {
     func stateChanged<T: StateMachineDataSource>(for subject: Subject<T>)
@@ -36,7 +36,7 @@ open class Subject<State: StateMachineDataSource> {
             return _state
         }
         set {
-            if (State.shouldTransitionFrom(from: _state, to: newValue)) {
+            if (State.shouldTransition(from: _state, to: newValue)) {
                 _state = newValue
             }
         }
