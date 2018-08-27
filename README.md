@@ -88,3 +88,17 @@ extension ViewController: StateListener {
     }
 }
 ```
+
+
+## Installation
+
+Carthage:
+```
+github "bangerang/SwiftMachine"
+```
+CocoaPods:
+```
+pod 'SwiftMachine'
+
+```
+
