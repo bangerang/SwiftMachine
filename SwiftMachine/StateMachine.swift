@@ -31,7 +31,7 @@ open class Subject<State: StateMachineDataSource> {
         }
     }
     
-    public var state: State {
+    open var state: State {
         get {
             return _state
         }
