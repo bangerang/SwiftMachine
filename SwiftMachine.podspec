@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftMachine'
-  s.version          = '1.0.0'
+  s.version          = '1.0'
   s.summary          = 'A Finite-like state machine written in Swift'
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'A simple, lightweight, yet powerful way to to manage state in your application.'
+  s.description      = 'A simple, lightweight, yet powerful way to to manage state and state transitions in your application.'
 
   s.homepage         = 'https://github.com/bangerang/SwiftMachine'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
