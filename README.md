@@ -43,7 +43,7 @@ print(pizza.state) // .makingDough since we specified this as the initial state
 
 pizza.state = .addTopping([salami, onion]]
 
-print(pizza.state) // .addTopping
+print(pizza.state) // .addingTopping
 
 pizza.state = .eating
 
