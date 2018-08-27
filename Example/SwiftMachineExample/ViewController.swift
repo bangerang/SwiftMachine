@@ -37,7 +37,6 @@ enum WeatherSeasonState: Int, StateMachineDataSource {
     
     
 }
-class WeatherSeason: Subject<WeatherSeasonState> {}
 
 class ViewController: UIViewController {
     
