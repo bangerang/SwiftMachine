@@ -63,7 +63,7 @@ print(pizza.state) // .eating
 Listening for state changes:
 
 ```swift
-class ViewController {
+class ViewController: UIViewController {
   
   let pizza = Pizza()
   
