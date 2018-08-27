@@ -99,6 +99,7 @@ github "bangerang/SwiftMachine"
 CocoaPods:
 ```
 pod 'SwiftMachine'
-
 ```
+## Credits
 
+Thanks to [@jemmons](https://twitter.com/jemmons) for me inspiring me to build this library, I really recommend you to read his [blog](http://www.figure.ink/blog/2015/1/31/swift-state-machines-part-1) about State Machines in Swift.
