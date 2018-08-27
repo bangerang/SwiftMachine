@@ -71,3 +71,4 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 SwiftMachine.framework.zip
+SwiftMachine.framework

@@ -21,7 +21,7 @@ open class Subject<State: StateMachineDataSource> {
     
     private var _state: State = State.initialState {
         didSet {
-            listeners.compact()
+            listeners.removeNilValues()
             for i in 0..<listeners.count {
                 guard let listener = listeners.object(at: i) as? StateListener else {
                     continue
@@ -45,7 +45,7 @@ open class Subject<State: StateMachineDataSource> {
     public init() {}
     
     public func addListener<T: StateListener>(_ stateListener: T) {
-        listeners.compact()
+        listeners.removeNilValues()
         listeners.addObject(stateListener)
         stateListener.stateChanged(for: self)
     }
