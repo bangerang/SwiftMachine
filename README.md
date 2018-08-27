@@ -10,7 +10,7 @@ Define your state and subject:
 enum PizzaState: StateMachineDataSource {
 
     case makingDough
-    case addingTopping([Ingredients])
+    case addingTopping([Topping])
     case baking
     case eating
     
@@ -30,7 +30,20 @@ enum PizzaState: StateMachineDataSource {
     }
 }
 
-class Pizza: Subject<PizzaState> {}
+class Pizza: Subject<PizzaState> {
+
+    private(set) var topping: [Topping] = []
+    
+    override var state: PizzaState {
+        didSet {
+            // Maybe we want to persist the topping
+            if case .addingTopping(let topping) = state {
+                self.topping = topping
+                print(self.topping) // [salami, onion]
+            }
+        }
+    }
+}
 ```
 
 Create a new subject and modify its state:
@@ -41,13 +54,13 @@ let pizza = Pizza()
 
 print(pizza.state) // .makingDough since we specified this as the initial state
 
-pizza.state = .addTopping([salami, onion]]
+pizza.state = .addingTopping([salami, onion]]
 
 print(pizza.state) // .addingTopping
 
 pizza.state = .eating
 
-print(pizza.state) // still .addTopping since transition between .addTopping and .eat is not allowed, you have the bake the pizza first!
+print(pizza.state) // still .addingTopping since transition between .addTopping and .eating is not allowed, you have the bake the pizza first!
 
 pizza.state = .baking 
 
