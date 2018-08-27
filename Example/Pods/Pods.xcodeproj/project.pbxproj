@@ -304,44 +304,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1FA778C3664F2A8F8C08B18CA6C0B2F3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D4C6E42205D1379D61418E139822191 /* SwiftMachine.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftMachine/SwiftMachine-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftMachine/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftMachine/SwiftMachine.modulemap";
-				PRODUCT_MODULE_NAME = SwiftMachine;
-				PRODUCT_NAME = SwiftMachine;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3906FF2263EC8718D2D85FBFC0A7D59D /* Release */ = {
+		213F7E31E07BF06E648E246AFA99B56F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D4C6E42205D1379D61418E139822191 /* SwiftMachine.xcconfig */;
 			buildSettings = {
@@ -371,7 +334,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -500,6 +463,43 @@
 			};
 			name = Release;
 		};
+		9EF412792D72A3E3A84E8B3EC50BC2EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D4C6E42205D1379D61418E139822191 /* SwiftMachine.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftMachine/SwiftMachine-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftMachine/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftMachine/SwiftMachine.modulemap";
+				PRODUCT_MODULE_NAME = SwiftMachine;
+				PRODUCT_NAME = SwiftMachine;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		A8EC939D23ADE0326C1234BFA35CD194 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D24C4A3356861B74CDE2ABD8BC61258D /* Pods-SwiftMachineExample.release.xcconfig */;
@@ -604,8 +604,8 @@
 		A03AC3239E799244B1D7158BBF31C74A /* Build configuration list for PBXNativeTarget "SwiftMachine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FA778C3664F2A8F8C08B18CA6C0B2F3 /* Debug */,
-				3906FF2263EC8718D2D85FBFC0A7D59D /* Release */,
+				9EF412792D72A3E3A84E8B3EC50BC2EA /* Debug */,
+				213F7E31E07BF06E648E246AFA99B56F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

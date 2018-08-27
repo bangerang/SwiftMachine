@@ -1,5 +1,5 @@
 PODS:
-  - SwiftMachine (1.0.0)
+  - SwiftMachine (1.0.1)
 
 DEPENDENCIES:
   - SwiftMachine (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftMachine: 57b9bce3e75f410411115a491fce65791def1095
+  SwiftMachine: 9251e72c607436d9f1c4472365e25d699d990ad3
 
 PODFILE CHECKSUM: 4ba9cf6198399802770bc61ff75fe63a544bdf94
 
