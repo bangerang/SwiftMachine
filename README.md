@@ -86,7 +86,16 @@ class ViewController: UIViewController {
   }
   
   func updateUI() {
-     // Do stuff
+     switch pizza.state {
+        case .makingDough:
+            handleDoughUI()
+        case .addingTopping(let toppings):
+            handleToppingUI(toppings)
+        case .baking:
+            handleBakingUI()
+        case .eating:
+            handleEatingUI()
+     }
   }
   
 }
