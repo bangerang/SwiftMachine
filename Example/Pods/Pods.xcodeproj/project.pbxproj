@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,22 +38,22 @@
 		4E53447C8D44A70EC7986FF236757C65 /* Pods-SwiftMachineExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftMachineExample.modulemap"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5F399F7137B7443A8EC00EC8760D9872 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = SwiftMachine/Info.plist; sourceTree = "<group>"; };
-		6E8C352357E95177A2B7FE49D8C84CF1 /* SwiftMachine.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SwiftMachine.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6E8C352357E95177A2B7FE49D8C84CF1 /* SwiftMachine.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = SwiftMachine.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6FC2DAA333D56E0F85BDFE7391746BE8 /* Pods-SwiftMachineExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftMachineExample-dummy.m"; sourceTree = "<group>"; };
 		808D3F59E2F33DBBB0ECCFF3E5DE6807 /* Pods-SwiftMachineExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftMachineExample.debug.xcconfig"; sourceTree = "<group>"; };
 		86EB6F648A9F5490D1F82A529FDBC2D1 /* Pods-SwiftMachineExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftMachineExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		8ACA0FA605DF55C60A8A8798194F869A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8ACA0FA605DF55C60A8A8798194F869A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		954F0EBE2230D3404DF470A9D2665289 /* Pods-SwiftMachineExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftMachineExample-resources.sh"; sourceTree = "<group>"; };
 		A0E14B780D187825F2751ACA0B84F94B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAD60075A6709810EEBFF91E3AE1CE53 /* SwiftMachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftMachine.framework; path = SwiftMachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAD60075A6709810EEBFF91E3AE1CE53 /* SwiftMachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC10710D7047BBD17CF639829688F252 /* Pods-SwiftMachineExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftMachineExample-frameworks.sh"; sourceTree = "<group>"; };
 		C6E1DF687A4AA093AB23D749F5EB7E2A /* SwiftMachine-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftMachine-dummy.m"; sourceTree = "<group>"; };
 		C7BD25AE0F698951C16B572CD1C2032C /* StateMachine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StateMachine.swift; path = SwiftMachine/StateMachine.swift; sourceTree = "<group>"; };
 		D24C4A3356861B74CDE2ABD8BC61258D /* Pods-SwiftMachineExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftMachineExample.release.xcconfig"; sourceTree = "<group>"; };
 		D76033E482A5B31BFFD087BFE9F14256 /* Pods-SwiftMachineExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftMachineExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E674DDB3D101A3B9D11EBCE987FEE85F /* Pods_SwiftMachineExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftMachineExample.framework; path = "Pods-SwiftMachineExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9D2410B97FAB4B3DB4B5EBEA80A7BFC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E674DDB3D101A3B9D11EBCE987FEE85F /* Pods_SwiftMachineExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftMachineExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9D2410B97FAB4B3DB4B5EBEA80A7BFC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		EF55DA62BA184EE6E157C396C9D079C4 /* SwiftMachine-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMachine-umbrella.h"; sourceTree = "<group>"; };
 		F5ADCE1C9EF79659222611BC78D22489 /* SwiftMachine.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftMachine.modulemap; sourceTree = "<group>"; };
 		F9B80BDD961B32A161A91893C7937DBE /* SwiftMachine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftMachine.h; path = SwiftMachine/SwiftMachine.h; sourceTree = "<group>"; };
@@ -252,7 +252,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					93D152CEE31F0585C250427897306255 = {
+						LastSwiftMigration = 1000;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -322,11 +327,7 @@
 				INFOPLIST_FILE = "Target Support Files/SwiftMachine/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftMachine/SwiftMachine.modulemap";
 				PRODUCT_MODULE_NAME = SwiftMachine;
 				PRODUCT_NAME = SwiftMachine;
@@ -334,7 +335,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.2;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -459,6 +461,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
@@ -481,11 +484,7 @@
 				INFOPLIST_FILE = "Target Support Files/SwiftMachine/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftMachine/SwiftMachine.modulemap";
 				PRODUCT_MODULE_NAME = SwiftMachine;
 				PRODUCT_NAME = SwiftMachine;
@@ -493,7 +492,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.2;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -518,11 +518,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftMachineExample/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftMachineExample/Pods-SwiftMachineExample.modulemap";
 				OTHER_LDFLAGS = "";
@@ -558,11 +554,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftMachineExample/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftMachineExample/Pods-SwiftMachineExample.modulemap";
 				OTHER_LDFLAGS = "";
