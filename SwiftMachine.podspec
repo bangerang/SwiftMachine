@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftMachine'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'A Finite-like state machine written in Swift'
 
 # This description is used to generate tags and improve search results.
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   s.author           = { 'bangerang' => 'jo1han@hotmail.com' }
   s.source           = { :git => 'https://github.com/bangerang/SwiftMachine.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/johanthorell'
+  s.exclude_files = "SwiftMachine/*.plist"
 
   s.swift_version = '3.2'
   s.ios.deployment_target = '10.0'
