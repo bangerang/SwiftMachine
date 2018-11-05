@@ -4,7 +4,7 @@ Manage state AND state transitions in a predictable and declarative way with Swi
 
 ## Basic Example
 
-Define your state and subject:
+Define your state and state machine:
 
 ```swift
 enum PizzaState: StateMachineDataSource {
@@ -30,7 +30,7 @@ enum PizzaState: StateMachineDataSource {
     }
 }
 
-class Pizza: Subject<PizzaState> {
+class Pizza: StateMachine<PizzaState> {
 
     private(set) var topping: [Topping] = []
     
@@ -46,7 +46,7 @@ class Pizza: Subject<PizzaState> {
 }
 ```
 
-Create a new subject and modify its state:
+Create a new state machine and modify its state:
 
 ```swift
 
@@ -100,8 +100,8 @@ class ViewController: UIViewController {
   
 }
 extension ViewController: StateListener {
-    func stateChanged<T>(for subject: Subject<T>) where T : StateMachineDataSource {
-        switch subject {
+    func stateChanged<T>(for stateMachine: StateMachine<T>) where T : StateMachineDataSource {
+        switch stateMachine {
             case _ as Pizza:
             updateUI()
         default:
