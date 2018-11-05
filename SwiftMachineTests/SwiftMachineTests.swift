@@ -19,7 +19,7 @@ class SwiftMachineTests: XCTestCase {
 
         var asyncExpectation: XCTestExpectation?
         
-        func stateChanged<T>(for subject: Subject<T>) where T : StateMachineDataSource {
+        func stateChanged<T>(for subject: StateMachine<T>) where T : StateMachineDataSource {
             if let expectation = asyncExpectation {
                 expectation.fulfill()
             }
@@ -49,7 +49,7 @@ class SwiftMachineTests: XCTestCase {
         }
     }
     
-    class StateSubjectMock: Subject<StateMock> {}
+    class StateSubjectMock: StateMachine<StateMock> {}
     
     // MARK: - Tests
     override func setUp() {

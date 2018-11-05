@@ -11,11 +11,14 @@ public protocol StateMachineDataSource {
     static var initialState: Self { get }
     static func shouldTransition(from: Self, to: Self) -> Bool
 }
+
+
 public protocol StateListener: class {
-    func stateChanged<T: StateMachineDataSource>(for subject: Subject<T>)
+    func stateChanged<T: StateMachineDataSource>(for subject: StateMachine<T>)
 }
 
-open class Subject<State: StateMachineDataSource> {
+
+open class StateMachine<State: StateMachineDataSource> {
     
     private var listeners: NSPointerArray = NSPointerArray.weakObjects()
     
