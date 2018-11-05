@@ -13,13 +13,13 @@ class SwiftMachineTests: XCTestCase {
     
     // MARK: - Mocks
     var stateListenerMock: StateListenerMock!
-    var subject: StateSubjectMock!
+    var stateMachine: StateMachineMock!
     
     class StateListenerMock: StateListener {
 
         var asyncExpectation: XCTestExpectation?
         
-        func stateChanged<T>(for subject: StateMachine<T>) where T : StateMachineDataSource {
+        func stateChanged<T>(for stateMachine: StateMachine<T>) where T : StateMachineDataSource {
             if let expectation = asyncExpectation {
                 expectation.fulfill()
             }
@@ -49,33 +49,33 @@ class SwiftMachineTests: XCTestCase {
         }
     }
     
-    class StateSubjectMock: StateMachine<StateMock> {}
+    class StateMachineMock: StateMachine<StateMock> {}
     
     // MARK: - Tests
     override func setUp() {
         super.setUp()
         stateListenerMock = StateListenerMock()
-        subject = StateSubjectMock()
-        subject.addListener(stateListenerMock)
+        stateMachine = StateMachineMock()
+        stateMachine.addListener(stateListenerMock)
     }
 
     func testShouldBeAbleToGoFromFirstToSecond() {
-        XCTAssert(subject.state == .first)
-        subject.state = .second
-        XCTAssert(subject.state == .second)
+        XCTAssert(stateMachine.state == .first)
+        stateMachine.state = .second
+        XCTAssert(stateMachine.state == .second)
     }
     
     func testShouldNotBeAllowedToFoFromFirstToThird() {
-        XCTAssert(subject.state == .first)
-        subject.state = .third
-        XCTAssert(subject.state == .first)
+        XCTAssert(stateMachine.state == .first)
+        stateMachine.state = .third
+        XCTAssert(stateMachine.state == .first)
     }
     
     func testListenerShouldBeNotified() {
-        XCTAssert(subject.state == .first)
+        XCTAssert(stateMachine.state == .first)
         let aExpectation = expectation(description: "Listener gets notified")
         stateListenerMock.asyncExpectation = aExpectation
-        subject.state = .second
+        stateMachine.state = .second
         waitForExpectations(timeout: 0.2) { error in
             if let error = error {
                 XCTFail("waitForExpectationsWithTimeout errored: \(error)")

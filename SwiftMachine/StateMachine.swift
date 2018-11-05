@@ -14,7 +14,7 @@ public protocol StateMachineDataSource {
 
 
 public protocol StateListener: class {
-    func stateChanged<T: StateMachineDataSource>(for subject: StateMachine<T>)
+    func stateChanged<T: StateMachineDataSource>(for stateMachine: StateMachine<T>)
 }
 
 
