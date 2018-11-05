@@ -102,11 +102,7 @@ class ViewController: UIViewController {
 extension ViewController: StateListener {
     func stateChanged<T>(for stateMachine: StateMachine<T>) where T : StateMachineDataSource {
         switch stateMachine {
-            case _ as Pizza:
             updateUI()
-        default:
-            assert(false)
-        }
     }
 }
 ```
