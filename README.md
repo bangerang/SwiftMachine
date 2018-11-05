@@ -101,8 +101,7 @@ class ViewController: UIViewController {
 }
 extension ViewController: StateListener {
     func stateChanged<T>(for stateMachine: StateMachine<T>) where T : StateMachineDataSource {
-        switch stateMachine {
-            updateUI()
+        updateUI()
     }
 }
 ```
