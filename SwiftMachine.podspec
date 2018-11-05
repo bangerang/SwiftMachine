@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint Pastel.podspec' to ensure this is a
+# Be sure to run `pod lib lint SwiftMachine.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -32,11 +32,4 @@ Pod::Spec.new do |s|
 
   s.source_files = 'SwiftMachine/**/*'
   
-  # s.resource_bundles = {
-  #   'Pastel' => ['Pastel/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
